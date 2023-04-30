@@ -3,6 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <title>Reproductor de video</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-mtB2i5G5O+iYM5j5HNIAfIduX7iF8li5OtbZjC0+jDfhltBvN0HTwRy6U98Y6Uj3qvgltf/nOhqlcQG1jK47Q==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link rel="stylesheet" href="style.css">
   <script src="main.js"></script>
 </head>
@@ -11,6 +14,7 @@
   <div id="video-container">
     <video id="video" controls poster="imagen_poster_video.png"></video>
     <div id="controls">
+      <input type="file" id="file-input" accept="video/*">
       <button id="play-btn">▶ Reproducir</button>
       <button id="pause-btn">▐▐ Pausar</button>
       <button id="volume-up-btn">➕</button>

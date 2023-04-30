@@ -1,21 +1,36 @@
 document.addEventListener("DOMContentLoaded", function() {
   var video = document.getElementById("video");
   var playBtn = document.getElementById("play-btn");
-  var pausebtn = document.getElementById("pause-btn");
+  var pauseBtn = document.getElementById("pause-btn");
   var volumeUpBtn = document.getElementById("volume-up-btn");
   var volumeDownBtn = document.getElementById("volume-down-btn");
+  var fileInfo = document.getElementById("file-info");
+
+  var input = document.getElementById("file-input");
+  input.addEventListener("change", function() {
+    var file = this.files[0];
+
+    if (file) {
+      var blobUrl = URL.createObjectURL(file);
+      video.src = blobUrl;
+
+      fileInfo.innerHTML = '<p>Nombre del archivo: ' + file.name + '</p>' +
+                             '<p>Última modificación: ' + file.lastModifiedDate.toLocaleString() + '</p>' +
+                             '<p>Tamaño: ' + file.size + ' bytes</p>';
+    }
+  });
 
   playBtn.addEventListener("click", function() {
     if (video.paused) {
       video.play();
-      
+    
     } 
   });
 
-  pausebtn.addEventListener("click", function() {
-    if (video.play) {
+  pauseBtn.addEventListener("click", function() {
+    if (!video.paused) {
       video.pause();
-      
+  
     } 
   });
 
@@ -40,26 +55,12 @@ document.addEventListener("DOMContentLoaded", function() {
   });
 
   video.addEventListener("canplay", function() {
+    /*fileInfo.innerHTML += '<p>Duración del video: ' + video.duration.toFixed(2) + ' segundos</p>' +
+                           '<p>Ancho del video: ' + video.size + ' píxeles</p>' +
+                           '<p>Alto del video: ' + video.videoHeight + ' píxeles</p>';*/
     alert("El video está listo para reproducirse.");
   });
 
-  var input = document.createElement("input");
-  input.type = "file";
-  input.accept = "video/*";
 
-  input.addEventListener("change", function() {
-    var file = this.files[0];
-    
-    if (file) {
-      var blobUrl = URL.createObjectURL(file);
-      video.src = blobUrl;
 
-      fileInfo.innerHTML = '<p>Nombre del archivo: ' + file.name + '</p>' +
-                             '<p>Última modificación: ' + file.lastModifiedDate.toLocaleString() + '</p>' +
-                             '<p>Tamaño: ' + file.size + ' bytes</p>';
-      
-    }
-  });
-
-  document.body.appendChild(input);
 });
