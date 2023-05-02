@@ -1,60 +1,58 @@
+/* Práctica API's en HTML5 Samsung Desarrolladoras - Laura Toledo Gutiérrez */
+
 body {
-    background-color: #f2f2f2;
-  }
-  
-  h1 {
-    text-align: center;
-    margin-top: 50px;
-  }
-  
-  #video-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    margin-top: 50px;
-  }
-  
-  #video {
-    width: 60%;
-  }
-  
-  #controls {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 20px;
-  }
-  #controls input{
-    font-size: 20px;
-    background-color: #fff;
-    color: #555;
-    border: none;
-    border-radius: 5px;
-    padding: 10px;
-    margin: 0 10px;
-    cursor: pointer;
-  }
+  background-color: #ebe8e8;
+}
 
-  #controls button {
-    font-size: 20px;
-    background-color: #fff;
-    color: #555;
-    border: none;
-    border-radius: 5px;
-    padding: 10px;
-    margin: 0 10px;
-    cursor: pointer;
-  }
-  
-  #controls button:hover {
-    background-color: #eee;
-  }
-  
-  #file-info {
-    text-align: center;
-    margin-top: 50px;
-    font-size: 18px;
-  }
+h1 {
+  text-align: center;
+  font-weight: bold;
+  margin-top: 50px;
+  font-size: 32px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
 
-  
+#video-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 50px;
+}
+
+#video {
+  width: 50%;
+}
+
+#controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+#controls input {
+  font-size: 15px;
+  background-color: #e2e2e2;
+  color: #000000;
+  border-radius: 7px;
+  border: 1px solid black;
+  padding: 7px;
+  margin: 0 10px;
+  cursor: pointer;
+}
+
+#controls button {
+  font-size: 15px;
+  background-color: #e2e2e2;
+  color: #000000;
+  border-radius: 10px;
+  border: 1px solid black;
+  padding: 7px;
+  margin: 0 2px;
+  cursor: pointer;
+}
+
+#controls button:hover {
+  background-color: #ddd4d4;
+}
