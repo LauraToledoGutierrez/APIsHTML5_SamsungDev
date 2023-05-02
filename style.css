@@ -1,7 +1,7 @@
 /* Práctica API's en HTML5 Samsung Desarrolladoras - Laura Toledo Gutiérrez */
 
 body {
-  background-color: #ebe8e8;
+  background-color: #fceeee;
 }
 
 h1 {
@@ -12,6 +12,10 @@ h1 {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
+#video {
+  width: 50%;
+}
+
 #video-container {
   display: flex;
   justify-content: center;
@@ -20,20 +24,20 @@ h1 {
   margin-top: 50px;
 }
 
-#video {
-  width: 50%;
-}
-
 #controls {
   display: flex;
   justify-content: center;
   align-items: center;
   margin-top: 20px;
+  background-color: #ffc58f;
+  border-radius: 7px;
+  border: 1px solid black;
+  height: 50px;
 }
 
 #controls input {
   font-size: 15px;
-  background-color: #e2e2e2;
+  background-color: #eeeeee;
   color: #000000;
   border-radius: 7px;
   border: 1px solid black;
@@ -44,7 +48,7 @@ h1 {
 
 #controls button {
   font-size: 15px;
-  background-color: #e2e2e2;
+  background-color: #fffcfc;
   color: #000000;
   border-radius: 10px;
   border: 1px solid black;

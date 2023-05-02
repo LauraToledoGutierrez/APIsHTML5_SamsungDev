@@ -1,15 +1,14 @@
 /* Práctica API's en HTML5 Samsung Desarrolladoras - Laura Toledo Gutiérrez */
 
-//Salta cuando el HTML ha sido cargado
+//Se activa cuando el HTML ha sido cargado
 document.addEventListener("DOMContentLoaded", function() {
   //Accedemos a los elementos del HTML
   var video = document.getElementById("video");
-  var playBtn = document.getElementById("play-btn");
-  var pauseBtn = document.getElementById("pause-btn");
-  var volumeUpBtn = document.getElementById("volume-up-btn");
-  var volumeDownBtn = document.getElementById("volume-down-btn");
-  var fileInfo = document.getElementById("file-info");
-  var input = document.getElementById("file-input");
+  var input = document.getElementById("fileInput");
+  var playBtn = document.getElementById("playBtn");
+  var pauseBtn = document.getElementById("pauseBtn");
+  var volumeUpBtn = document.getElementById("volumeUpBtn");
+  var volumeDownBtn = document.getElementById("volumeDownBtn");
 
   //Se activa cuando se selecciona un archivo
   input.addEventListener("change", function() {
@@ -32,9 +31,9 @@ document.addEventListener("DOMContentLoaded", function() {
     alert("Cargando...");
   });
 
-  //Salta cuando el video esta listo para reproducirse
+  //Se activa cuando el video esta listo para reproducirse
   video.addEventListener("canplay", function() {
-    //Muestra la información del archivo de video y tambien agrega esa información al elemento HTML 'fileInfo'
+    //Muestra la información del archivo de video 
     alert('El video esta listo para reproducirse\n\n' + 
           'Nombre del archivo: ' + input.files[0].name + '\n' +
           'Tamaño del archivo: '+input.files[0].size + '\n' +
